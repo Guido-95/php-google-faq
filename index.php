@@ -86,18 +86,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title> Google faq </title>
 </head>
 <body>
+
+<div class="bar-fixed">
+    <div class="bar-fixed-top">
+        <h3 class="privacy-bar">Privacy e termini</h3>
+    </div>
+    <div class="bar-fixed-bottom">
+        <ul class="lista-fixed">
+            <li> Introduzione</li>
+            <li> Norme Sulla privacy</li>
+            <li>Termini di servizio</li>
+            <li>Tecnologie</li>
+            <li class='attivo'>Domande frequenti</li>
+        </ul>
+    </div>                         
+</div>
+
 <div class="wrapper">
+
     <?php foreach ($faq as $domanda => $arrayRisposte) { ?>
+
         <section>               
             <h2> 
                 <?= $domanda; ?>
@@ -107,13 +124,14 @@
                 foreach ($arrayRisposte as $risposta) {   
             ?>
         
-                <p>
+            <p>
                 <?= $risposta; ?>
-                </p>
+            </p>
         </section>
     <?php }
     }; 
     ?>
-</div>  
+</div>
+
 </body>
 </html>
